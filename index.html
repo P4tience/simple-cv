@@ -2,15 +2,35 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>My CV</title>
+  <title>Ralph Lee's CV</title>
 </head>
 <body style="margin: 0; padding: 20px; font-family: sans-serif;">
 
-  <h1 style="text-align:center; font-weight:300;">My CV</h1>
+  <div style="text-align:center; margin-bottom:20px;">
+    <img src="https://flagcdn.com/w40/gb.png"  width="60"  onclick="showCV('en')">
+    <img src="https://flagcdn.com/w40/fr.png"  width="60"  onclick="showCV('fr')">
+    
+  </div>
 
-  <div id="en-cv-container" style="text-align:center;">
-    <img src="CV DEV ENGLISH 2025 BLUR.png" style="width:100%; max-width:900px;">
-  </div>  
-  
+    <script>
+    function showCV(lang) {
+      const c = document.getElementById('cv-container');
+
+      if (lang === 'en') {
+        c.innerHTML = `
+          <img src="CV DEV ENGLISH 2025 BLUR.png" style="width:100%; max-width:900px;">
+        `;
+      }
+
+      if (lang === 'fr') {
+        c.innerHTML = `
+          <img src="CV DEV 2025 Redacted.png" style="width:100%; max-width:900px;">
+        `;
+      }
+    }
+
+    // Default language
+    showCV('en');
+  </script>  
 </body>
 </html>
